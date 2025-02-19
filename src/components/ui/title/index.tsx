@@ -1,3 +1,4 @@
+import React from "react";
 import { Typography, TypographyProps } from "@mui/material";
 
 interface TitleProps extends TypographyProps {

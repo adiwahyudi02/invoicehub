@@ -6,7 +6,7 @@ import {
 import { Control, FieldValues, Path } from "react-hook-form";
 import { ControllerReactHookForm } from "../controller-react-hook-form";
 import LabelField from "../label-field";
-import { ChangeEvent } from "react";
+import React, { ChangeEvent } from "react";
 import { formatCurrency, unformatCurrency } from "@/utils/currency.utils";
 
 export interface TextFieldProps<FormData extends FieldValues>
