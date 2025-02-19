@@ -23,9 +23,12 @@ export const getItem = <T>(key: string): T | null => {
     if (serializedValue === null) {
       return null;
     }
-    return JSON.parse(serializedValue) as T;
-  } catch (error) {
-    console.error(`Error getting item ${key} from localStorage`, error);
+    const parsedValue = JSON.parse(serializedValue);
+    if (typeof parsedValue !== "object" && typeof parsedValue !== "string") {
+      return parsedValue as T;
+    }
+    return parsedValue as T;
+  } catch {
     return null;
   }
 };
