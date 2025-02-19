@@ -12,7 +12,16 @@ const config: Config = {
   testEnvironment: "jsdom",
 
   transform: {
-    "^.+\\.(ts|tsx|js|jsx)$": "babel-jest", // Use Babel to transform JSX
+    "^.+\\.(js|jsx|ts|tsx)$": [
+      "babel-jest",
+      {
+        presets: [
+          "@babel/preset-env",
+          "@babel/preset-react",
+          "@babel/preset-typescript",
+        ],
+      },
+    ],
   },
 
   transformIgnorePatterns: [
