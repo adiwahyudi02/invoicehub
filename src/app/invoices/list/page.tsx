@@ -14,8 +14,18 @@ export default function InvoicesListPage() {
       <Box
         display="flex"
         justifyContent="space-between"
-        alignItems="center"
         mb={4}
+        sx={{
+          flexDirection: {
+            xs: "column",
+            sm: "row",
+          },
+          alignItems: {
+            xs: "start",
+            sm: "center",
+          },
+          gap: 5,
+        }}
       >
         <Title>My Invoices</Title>
         <InvoiceFilter />
