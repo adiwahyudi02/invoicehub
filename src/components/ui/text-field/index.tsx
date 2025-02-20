@@ -120,6 +120,14 @@ export const TextField = <T extends FieldValues>({
 
             ...sx,
           }}
+          slotProps={{
+            select: {
+              native: false,
+              inputProps: {
+                "aria-label": name,
+              },
+            },
+          }}
           {...fieldProps}
           {...props}
         />

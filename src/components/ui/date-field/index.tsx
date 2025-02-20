@@ -43,6 +43,10 @@ export const DateField = <T extends FieldValues>({
                 error: !!fieldState?.error,
                 helperText: fieldState?.error?.message || helperText,
                 fullWidth: true,
+                inputProps: {
+                  "data-testid": name,
+                },
+                id: name,
                 ...fieldProps,
               },
             }}
