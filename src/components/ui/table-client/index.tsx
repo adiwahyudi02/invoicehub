@@ -11,7 +11,7 @@ import {
   TablePagination,
   Skeleton,
 } from "@mui/material";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 export interface Column<T> {
   label: string;
