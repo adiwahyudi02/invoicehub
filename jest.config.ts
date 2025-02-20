@@ -31,6 +31,7 @@ const config: Config = {
 
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/$1",
+    "next/font/google": "<rootDir>/__mocks__/next/font/google.js",
   },
 
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json"],
