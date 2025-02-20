@@ -1,4 +1,4 @@
-import { ChangeEvent } from "react";
+import React, { ChangeEvent } from "react";
 import { styled, Switch, SwitchProps, useColorScheme } from "@mui/material";
 
 const ThemeModeSwitchStyled = styled(Switch)(({ theme }) => ({
@@ -66,6 +66,7 @@ export const ThemeModeSwitch: React.FC<SwitchProps> = (props) => {
 
   return (
     <ThemeModeSwitchStyled
+      data-testid="theme-mode-switch"
       checked={mode === "dark"}
       onChange={handleChange}
       {...props}

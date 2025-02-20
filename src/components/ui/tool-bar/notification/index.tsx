@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { Badge, Menu, MenuItem, Typography } from "@mui/material";
 import { NotifIcon } from "../../icons/notif-icon";
 import { IconButtonRounded } from "../../icon-button-rounded";
@@ -20,6 +20,7 @@ export const ToolbarNotification: React.FC = () => {
   return (
     <>
       <IconButtonRounded
+        data-testid="toolbar-notification"
         color="inherit"
         aria-label="Notification"
         sx={{ mx: 2 }}

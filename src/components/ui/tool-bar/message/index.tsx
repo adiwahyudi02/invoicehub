@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { Badge, Menu, MenuItem, Typography } from "@mui/material";
 import { IconButtonRounded } from "../../icon-button-rounded";
 import { ChatIcon } from "../../icons/chat-icon";
@@ -24,6 +24,7 @@ export const ToolbarMessage: React.FC = () => {
           color="inherit"
           aria-label="Messages"
           onClick={handleClick}
+          data-testid="toolbar-message"
         >
           <ChatIcon />
         </IconButtonRounded>
