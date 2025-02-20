@@ -1,8 +1,10 @@
+import React from "react";
 import { MenuItem } from "@mui/material";
 import { FieldValues } from "react-hook-form";
 import { TextField, TextFieldProps } from "../text-field";
 
-interface SelectFieldProps<T extends FieldValues> extends TextFieldProps<T> {
+export interface SelectFieldProps<T extends FieldValues>
+  extends TextFieldProps<T> {
   options: { value: string | number; label: string }[];
 }
 
