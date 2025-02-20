@@ -144,6 +144,14 @@ const theme = createTheme({
         },
       ],
     },
+    MuiTableCell: {
+      styleOverrides: {
+        head: {
+          fontWeight: "600",
+          backgroundColor: "var(--mui-palette-background-default)",
+        },
+      },
+    },
   },
 });
 
