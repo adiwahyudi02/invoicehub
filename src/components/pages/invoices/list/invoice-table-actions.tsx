@@ -1,7 +1,7 @@
 "use client";
 
 import { IconButton, MenuItem, Menu } from "@mui/material";
-import { useState, MouseEvent } from "react";
+import React, { useState, MouseEvent } from "react";
 import { Menu as MenuIcon } from "@mui/icons-material";
 import { InvoiceType } from "@/lib/types/invoice";
 import Link from "next/link";
@@ -51,6 +51,7 @@ export default function InvoiceTableAction({ row }: InvoiceTableActionProps) {
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClickMenu}
+        aria-label="menu"
       >
         <MenuIcon fontSize="inherit" />
       </IconButton>

@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { Card, CardContent, Chip, Typography } from "@mui/material";
 import { Column, TableClient } from "@/components/ui/table-client";
 import { InvoiceType } from "@/lib/types/invoice";
