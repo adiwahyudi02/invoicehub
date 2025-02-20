@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Box,
   Drawer,
@@ -26,6 +26,30 @@ export const SideBar: React.FC = () => {
 
   const pathname = usePathname();
   const isActive = (href: string) => pathname === href;
+
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return (
+      <Box sx={{ width: { xs: 0, md: sidebarWidth } }} data-testid="sidebar">
+        <Drawer
+          open={true}
+          sx={{
+            "& .MuiDrawer-paper": {
+              width: { xs: 0, md: sidebarWidth },
+              bgcolor: "#1c2434",
+              color: "white",
+            },
+          }}
+          variant="permanent"
+        />
+      </Box>
+    );
+  }
 
   return (
     <Box width={{ md: sidebarWidth }} data-testid="sidebar">
