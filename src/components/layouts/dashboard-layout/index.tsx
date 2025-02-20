@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { Box, BoxProps, Container } from "@mui/material";
 import {
   DashboardProvider,
@@ -15,7 +16,13 @@ export const DashboardLayoutComponent: React.FC<BoxProps> = ({
   const { sidebarWidth } = useDashboardContext();
 
   return (
-    <Box display="flex" flexGrow={1} width="100%" {...props}>
+    <Box
+      display="flex"
+      flexGrow={1}
+      width="100%"
+      data-testid="content"
+      {...props}
+    >
       <SideBar />
       <Box
         width={{ md: `calc(100% - ${sidebarWidth})`, xs: "100%" }}

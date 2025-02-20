@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import {
   Box,
   Drawer,
@@ -27,7 +28,7 @@ export const SideBar: React.FC = () => {
   const isActive = (href: string) => pathname === href;
 
   return (
-    <Box width={{ md: sidebarWidth }}>
+    <Box width={{ md: sidebarWidth }} data-testid="sidebar">
       {isSidebarOpen && isMobile && (
         <IconButton
           size="small"
@@ -39,7 +40,11 @@ export const SideBar: React.FC = () => {
             color: "white",
           }}
         >
-          <Close fontSize="large" onClick={toggleSidebar} />
+          <Close
+            fontSize="large"
+            onClick={toggleSidebar}
+            data-testid="close-sidebar"
+          />
         </IconButton>
       )}
       <Drawer
