@@ -25,7 +25,7 @@ export const UserToolbar: React.FC = () => {
     <>
       <Box display="flex" alignItems="center" data-testid="user-toolbar">
         <Box textAlign="right" display={{ sm: "block", xs: "none" }} mr={2}>
-          <Typography fontWeight="600">John Does</Typography>
+          <Typography fontWeight="600">Adi Wahyudi</Typography>
           <Typography variant="body2" fontWeight="600" color="text.secondary">
             Verified Member
           </Typography>
@@ -34,7 +34,7 @@ export const UserToolbar: React.FC = () => {
         <IconButton onClick={handleClick} sx={{ p: 0 }}>
           <Avatar
             src="/profile.png"
-            alt="John Does image profile"
+            alt="Adi Wahyudi image profile"
             sx={{ width: 46, height: 46, mr: 1 }}
           />
           <KeyboardArrowDown />
